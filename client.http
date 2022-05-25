@@ -2,7 +2,7 @@
 
 ###
 
-http://localhost:8000/api/user
+http://localhost:8000/api/appdata
 Accept: application/json
 
 ###
@@ -12,13 +12,14 @@ Accept: application/json
 
 ###
 
-POST http://localhost:8000/api/appdata
+POST http://localhost:8000/api/messages
 Accept: application/json
 Content-Type: application/json
 
 {
-    "name": "app.version",
-    "value": "0.0.0"
+    "title": "m-2",
+    "content": "msg-2",
+    "author": "user-2"
 }
 
 ###
@@ -28,7 +29,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "value": "0.0.1"
+    "value": "0.0.0"
 }
 
 ###

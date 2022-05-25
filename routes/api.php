@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppDataController;
+use App\Http\Controllers\MessagesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,9 @@ Route::get("appdata/{appData}", [AppDataController::class, "show"]);
 Route::post("appdata", [AppDataController::class, "store"]);
 Route::patch("appdata/{appData}", [AppDataController::class, "update"]);
 Route::delete("appdata/{appData}", [AppDataController::class, "destroy"]);
+
+//
+Route::apiResource("messages", MessagesController::class);
 
 //
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
