@@ -1,41 +1,59 @@
 
 
-###
-
-http://localhost:8000/api/appdata
+http://localhost:8000/api/user
 Accept: application/json
+Authorization: Bearer 67|9UutFb73vlukvq1CvWUzOYNEBXLsAv9cDNNB8yGF
 
 ###
 
-http://localhost:8000/api/appdata
-Accept: application/json
-
-###
-
-POST http://localhost:8000/api/messages
+POST http://localhost:8000/api/authenticate
 Accept: application/json
 Content-Type: application/json
 
 {
-    "title": "m-2",
-    "content": "msg-2",
-    "author": "user-2"
+    "email": "user.1@email.com",
+    "password": "11"
 }
 
 ###
 
-PATCH http://localhost:8000/api/appdata/3
+http://localhost:8000/api/appdata
+Accept: application/json
+
+###
+
+POST http://localhost:8000/api/register
 Accept: application/json
 Content-Type: application/json
 
 {
-    "value": "0.0.0"
+    "name": "user.1",
+    "email": "user.1@email.com",
+    "password": "11",
+    "password_confirmation": "11"
+}
+
+###
+
+PATCH http://localhost:8000/api/appdata/4
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 62|W12iu3CTCuKNs6m1uHWQR390ujb3evHMMngOIl6Z
+
+{
+    "value": "true"
 }
 
 ###
 
 DELETE http://localhost:8000/api/appdata/1
 Accept: application/json
+
+###
+
+POST http://localhost:8000/api/logout
+Accept: application/json
+Authorization: Bearer 67|9UutFb73vlukvq1CvWUzOYNEBXLsAv9cDNNB8yGF
 
 ###
 
