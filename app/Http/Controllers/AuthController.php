@@ -47,7 +47,7 @@ class AuthController extends Controller
         $user  = User::where("email", $input["email"])->first();
         $token = null;
         //
-        if (null != $user) {
+        if ($user) {
             // verify hashed password
             if (Hash::check($input["password"], $user->password)) {
                 $token = $user->createToken(env("APP_ID") .".". $user->id);
@@ -63,7 +63,7 @@ class AuthController extends Controller
         // else 401 Unauthorized
         return response([
             "data" => [
-                "message" => "Unauthorized"
+                "message" => "Unauthorized Credentials"
             ]
         ], 401);
     }
