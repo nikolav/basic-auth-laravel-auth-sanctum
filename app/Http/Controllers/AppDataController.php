@@ -91,4 +91,10 @@ class AppDataController extends Controller
             "data" => $appData,
         ];
     }
+    public function byName ($name) {
+        $data = AppData::where("name", $name)->first();
+        return [
+            "data" => $data,
+        ];
+    }
 }

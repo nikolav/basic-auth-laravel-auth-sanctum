@@ -23,6 +23,7 @@ Route::get("/", function () {
 
 //
 Route::get("appdata", [AppDataController::class, "index"]);
+Route::get("appdata/name/{name}", [AppDataController::class, "byName"]);
 Route::get("appdata/{appData}", [AppDataController::class, "show"]);
 Route::post("appdata", [AppDataController::class, "store"]);
 Route::patch("appdata/{appData}", [AppDataController::class, "update"]);
