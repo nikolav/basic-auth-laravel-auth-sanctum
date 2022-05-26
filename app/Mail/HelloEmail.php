@@ -28,7 +28,9 @@ class HelloEmail extends Mailable
      */
     public function build()
     {
-        // return $this->view('view.name');
-        return $this->from(env("APP_ID") ."@nikolav.rs")->view('email-template');
+        return $this->from(env("APP_ID") . "@nikolav.rs")
+            ->view('email-template', [
+                "id" => "55555",
+            ]);
     }
 }

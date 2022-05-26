@@ -4,6 +4,11 @@ http://localhost:8000/api/user
 Accept: application/json
 Authorization: Bearer 81|nTLUViTVVr9Bb4OcuhyYf6vKeA52QuaJNC7DNaLT
 
+### send-email
+
+POST http://localhost:8000/api/send-email
+Accept: application/json
+
 ###
 
 POST http://localhost:8000/api/authenticate
@@ -17,7 +22,7 @@ Content-Type: application/json
 
 ###
 
-http://localhost:8000/api
+http://localhost:8000/api/messages
 Accept: application/json
 
 ###

@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
+//
 class MessagesController extends Controller
 {
     /**
@@ -16,7 +17,8 @@ class MessagesController extends Controller
     {
         //
         return [
-            "data" => Message::all(),
+            "data"  => Message::all(),
+            "total" => DB::table("messages")->count(),
         ];
     }
 

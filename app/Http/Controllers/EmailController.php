@@ -9,12 +9,12 @@ use Illuminate\Support\Facades\Mail;
 class EmailController extends Controller
 {
     //
-    public function sendEmail()
+    public function sendEmail(Request $req)
     {
         /**
          * Store a receiver email address to a variable.
          */
-        $reveiverEmailAddress = "admin@nikolav.rs";
+        $to = $req->input("email-to", "admin@nikolav.rs");
 
         /**
          * Import the Mail class at the top of this page,
@@ -24,7 +24,7 @@ class EmailController extends Controller
          * Also, call the send() method to incloude the
          * HelloEmail class that contains the email template.
          */
-        Mail::to($reveiverEmailAddress)->send(new HelloEmail);
+        Mail::to($to)->send(new HelloEmail);
 
     }
 }

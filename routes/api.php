@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AppDataController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\MessagesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -41,6 +42,8 @@ Route::apiResource("messages", MessagesController::class);
 Route::post("/register", [AuthController::class, "register"]);
 Route::post("/authenticate", [AuthController::class, "authenticate"]);
 
+//
+Route::post("/send-email", [EmailController::class, "sendEmail"]);
 //
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
