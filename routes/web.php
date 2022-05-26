@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect("/", "/api");
+
+/**
+ * Add a new route named "send-email". Upon accessing this URL, the "sendEmail"
+ * function inside the "EmailController" class will be triggered.
+ */
+Route::get('send-email', [EmailController::class, 'sendEmail']);
+

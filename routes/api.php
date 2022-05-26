@@ -18,9 +18,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", function () {
-    return response(env("APP_ID"), 200, [
-        "Content-Type" => "text/plain"
-    ]);
+    return [
+        "app.id"      => env("APP_ID"),
+        "app.name"    => env("APP_NAME"),
+        "app.version" => "0.0.0",
+        "app.git"     => env("APP_GITHUB")
+    ];
 });
 
 //
