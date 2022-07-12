@@ -23,9 +23,11 @@
       .C-2 { line-height:18.00px;font-family:"Courier New", monospace;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
     </style>
     <script type="text/javascript" src="wpscripts/jquery.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.wputils.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
       $("a.ActiveButton").bind({ mousedown:function(){if ( $(this).attr('disabled') === undefined ) $(this).addClass('Activated');}, mouseleave:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}, mouseup:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}});
+      enableSmoothScroll();
       });
     </script>
   </head>
