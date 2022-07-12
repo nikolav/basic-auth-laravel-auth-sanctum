@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Mail;
+namespace {{ namespace }};
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class HelloEmail extends Mailable
+class {{ class }} extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,9 +28,6 @@ class HelloEmail extends Mailable
      */
     public function build()
     {
-        return $this->from(env("APP_ID") . "@nikolav.rs")
-            ->view('email-template', [
-                "id" => "333",
-            ]);
+        return $this->view('view.name');
     }
 }

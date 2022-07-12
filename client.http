@@ -2,7 +2,7 @@
 
 http://localhost:8000/api/user
 Accept: application/json
-Authorization: Bearer 81|nTLUViTVVr9Bb4OcuhyYf6vKeA52QuaJNC7DNaLT
+Authorization: Bearer 94|S8zX1EvKioyurUTr47HNFgIDGbD6Q4z4q8Ra7wbJ
 
 ### send-email
 
@@ -16,13 +16,13 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "email": "admin@nikolav.rs",
+    "email": "user.3@email.com",
     "password": "122333"
 }
 
 ###
 
-http://localhost:8000/api/messages
+http://localhost:8000/api/appdata
 Accept: application/json
 
 ###
@@ -32,10 +32,10 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "name": "user.1",
-    "email": "user.1@email.com",
-    "password": "11",
-    "password_confirmation": "11"
+    "name": "user.3",
+    "email": "user.3@email.com",
+    "password": "122333",
+    "password_confirmation": "122333"
 }
 
 ###

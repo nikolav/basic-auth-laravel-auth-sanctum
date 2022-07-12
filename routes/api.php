@@ -29,11 +29,8 @@ Route::get("/", function () {
 
 //
 Route::get("appdata", [AppDataController::class, "index"]);
-Route::get("appdata/name/{name}", [AppDataController::class, "byName"]);
+Route::get("appdata/name/{appData:name}", [AppDataController::class, "byName"]);
 Route::get("appdata/{appData}", [AppDataController::class, "show"]);
-// Route::post("appdata", [AppDataController::class, "store"]);
-// Route::patch("appdata/{appData}", [AppDataController::class, "update"]);
-// Route::delete("appdata/{appData}", [AppDataController::class, "destroy"]);
 
 //
 Route::apiResource("messages", MessagesController::class);
@@ -45,16 +42,18 @@ Route::post("/authenticate", [AuthController::class, "authenticate"]);
 //
 Route::post("/send-email", [EmailController::class, "sendEmail"]);
 //
+//// run middleware @single route
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
+//
+// run middleware @many routes
 Route::group(["middleware" => ["auth:sanctum"]], function () {
     Route::get("/user", function (Request $req) {
         return $req->user();
     });
     //
     Route::post("/logout", [AuthController::class, "logout"]);
-    //
     //
     Route::post("appdata", [AppDataController::class, "store"]);
     Route::patch("appdata/{appData}", [AppDataController::class, "update"]);

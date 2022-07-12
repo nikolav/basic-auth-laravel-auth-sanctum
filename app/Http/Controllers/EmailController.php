@@ -14,7 +14,7 @@ class EmailController extends Controller
         /**
          * Store a receiver email address to a variable.
          */
-        $to = $req->input("email-to", "admin@nikolav.rs");
+        $to = $req->input("mailTo", "admin@nikolav.rs");
 
         /**
          * Import the Mail class at the top of this page,
