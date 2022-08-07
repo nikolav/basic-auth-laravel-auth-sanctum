@@ -2,12 +2,17 @@
 
 http://localhost:8000/api/user
 Accept: application/json
-Authorization: Bearer 94|S8zX1EvKioyurUTr47HNFgIDGbD6Q4z4q8Ra7wbJ
+Authorization: Bearer 96|RtYqBEF5dJcW5JwVG99GontvTdRal3cKSV40wXJh
 
 ### send-email
 
 POST http://localhost:8000/api/send-email
 Accept: application/json
+Content-Type: application/json
+
+{
+    "mailTo": "admin@nikolav.rs"
+}
 
 ###
 
@@ -46,7 +51,7 @@ Content-Type: application/json
 Authorization: Bearer 62|W12iu3CTCuKNs6m1uHWQR390ujb3evHMMngOIl6Z
 
 {
-    "value": "true"
+    "value": "122"
 }
 
 ###
@@ -62,3 +67,7 @@ Authorization: Bearer 78|fklG1wowH12MnYZE2DZiSli74G6OeiG427AsAu6L
 
 ###
 
+http://localhost:8000/api
+Accept: application/json
+
+###
