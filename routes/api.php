@@ -7,6 +7,7 @@ use App\Http\Controllers\MessagesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RenderHtmlController;
+use App\Http\Controllers\PdfController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +61,5 @@ Route::group(["middleware" => ["auth:sanctum"]], function () {
     Route::patch("appdata/{appData}", [AppDataController::class, "update"]);
     Route::delete("appdata/{appData}", [AppDataController::class, "destroy"]);
 });
+
+Route::post("/ijlwydmfdeo", [PdfController::class, "download"]);

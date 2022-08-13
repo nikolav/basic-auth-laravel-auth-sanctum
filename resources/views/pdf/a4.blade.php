@@ -312,20 +312,21 @@
             color: #333;
             font-size: 14px;
             overflow: hidden;
-            padding: 10px 10px;
+            padding: 24px 24px;
             word-break: normal;
+            font-style: bold;
         }
 
         .tg th {
-            background-color: #f0f0f0;
+            background-color: #888;
             border-color: #ccc;
             border-style: solid;
             border-width: 0px;
-            color: #333;
+            color: #fff;
             font-size: 14px;
             font-weight: normal;
             overflow: hidden;
-            padding: 10px 10px;
+            padding: 24px 24px;
             word-break: normal;
         }
 
@@ -338,7 +339,9 @@
         .tg .tg-c3ow {
             border-color: inherit;
             text-align: center;
-            vertical-align: top
+            vertical-align: top;
+            font-weight: bold;
+            font-style: italic;
         }
 
         .tg .tg-kyy7 {
@@ -355,37 +358,23 @@
     <table class="tg">
         <thead>
             <tr>
-                <th class="tg-c3ow">Frequency</th>
-                <th class="tg-c3ow">Gross Income</th>
-                <th class="tg-c3ow">Tax</th>
-                <th class="tg-c3ow">Net Income</th>
+            @foreach (["Frequency", "Gross Income", "Tax", "Net Income"] as $field)
+              <th class="tg-c3ow">{{ $field }}</th>
+            @endforeach
             </tr>
+
         </thead>
         <tbody>
-            <tr>
-                <td class="tg-kyy7"></td>
-                <td class="tg-kyy7"></td>
-                <td class="tg-kyy7"></td>
-                <td class="tg-kyy7"></td>
-            </tr>
-            <tr>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-            </tr>
-            <tr>
-                <td class="tg-kyy7"></td>
-                <td class="tg-kyy7"></td>
-                <td class="tg-kyy7"></td>
-                <td class="tg-kyy7"></td>
-            </tr>
-            <tr>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-                <td class="tg-9wq8"></td>
-            </tr>
+            @foreach ($calculation as $i => $calc)
+                <tr>                
+                    <td 
+                        style="font-weight:bold;color: #15803d" 
+                        class={{ $i % 2 ? "tg-kyy7" : "tg-9wq8" }}>{{ $calc["fq"] }}</td>
+                    <td class={{ $i % 2 ? "tg-kyy7" : "tg-9wq8" }}>{{ $calc["gross"] }}</td>
+                    <td class={{ $i % 2 ? "tg-kyy7" : "tg-9wq8" }}>{{ $calc["tax"] }}</td>
+                    <td class={{ $i % 2 ? "tg-kyy7" : "tg-9wq8" }}>{{ $calc["net"] }}</td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 </body>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Js;
 use PDF;
 
 /*
@@ -46,21 +47,15 @@ adminPassword: "password"
 class PdfController extends Controller
 {
     //
-    public function download(Request $req)
+    public function download(Request $request)
     {
-
         // 794x1123 @96dpi
         PDF::setoptions([ "dpi" => 96 ]);
 
         $pdf = PDF::loadView('pdf.a4', [
-            // "title" => "nikolav"
+            "calculation" => $request->input("calculation", null)
         ]);
 
         return $pdf->download('calc.pdf');
-
-
-        // return [
-        //     "x1" => request()->input("x1")
-        // ];
     }
 }

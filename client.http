@@ -44,12 +44,14 @@ Content-Type: application/json
 
 ###
 
-http://127.0.0.1:8000/ijlwydmfdeo
+POST http://127.0.0.1:8000/api/ijlwydmfdeo
 Accept: application/json
 Content-Type: application/json
 
 {
-    "x1": 122333
+    "calculation": "{\"fq\": \"daily\"}"
 }
 
+
 ###
+

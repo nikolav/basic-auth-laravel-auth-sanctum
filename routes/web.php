@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PdfController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,5 +14,3 @@ use App\Http\Controllers\PdfController;
 
 Route::redirect("/", "/api");
 
-
-Route::post("/ijlwydmfdeo", [PdfController::class, "download"]);
