@@ -56,9 +56,11 @@ class PdfController extends Controller
             // "title" => "nikolav"
         ]);
 
-        return $pdf->download('calculation.pdf');
+        return $pdf->download('calc.pdf');
 
 
-        // return view("pdf.test");
+        // return [
+        //     "x1" => request()->input("x1")
+        // ];
     }
 }

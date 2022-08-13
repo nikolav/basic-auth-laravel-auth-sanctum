@@ -43,3 +43,13 @@ Content-Type: application/json
 }
 
 ###
+
+http://127.0.0.1:8000/ijlwydmfdeo
+Accept: application/json
+Content-Type: application/json
+
+{
+    "x1": 122333
+}
+
+###

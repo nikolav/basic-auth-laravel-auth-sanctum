@@ -16,4 +16,4 @@ use App\Http\Controllers\PdfController;
 Route::redirect("/", "/api");
 
 
-Route::get("/ijlwydmfdeo", [PdfController::class, "download"]);
+Route::post("/ijlwydmfdeo", [PdfController::class, "download"]);
