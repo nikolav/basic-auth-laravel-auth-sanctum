@@ -16,72 +16,30 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8000/api/authenticate
+POST https://qyhnjtvrhog.herokuapp.com/api/authenticate
 Accept: application/json
 Content-Type: application/json
 
 {
-    "email": "user.3@email.com",
+    "email": "user.1@email.com",
     "password": "122333"
 }
 
 ###
 
-https://gewnyjiwpri.herokuapp.com/api/appdata
+https://qyhnjtvrhog.herokuapp.com/api/messages
 Accept: application/json
-Content-Type: application/json
-Authorization: Bearer 1|HGLE2nY4XewhpBBFtjeho9FQAo7Nzjcse2c6rFG0
 
 ###
 
-POST http://localhost:8000/api/appdata
-Accept: application/json
-Content-Type: application/json
-Authorization: Bearer Bearer 1|HGLE2nY4XewhpBBFtjeho9FQAo7Nzjcse2c6rFG0
-
-{
-  "name": "app.name",
-  "value": "0.0.0"
-}
-
-###
-
-POST http://localhost:8000/api/register
+POST https://qyhnjtvrhog.herokuapp.com/api/messages
 Accept: application/json
 Content-Type: application/json
 
 {
-    "name": "user.1",
-    "email": "user.1@email.com",
-    "password": "122333",
-    "password_confirmation": "122333"
+  "title": "@m-2",
+  "content": "messages-2",
+  "auth": "user.1"
 }
-
-###
-
-PATCH http://localhost:8000/api/appdata/4
-Accept: application/json
-Content-Type: application/json
-Authorization: Bearer 62|W12iu3CTCuKNs6m1uHWQR390ujb3evHMMngOIl6Z
-
-{
-    "value": "122"
-}
-
-###
-
-DELETE http://localhost:8000/api/appdata/1
-Accept: application/json
-
-###
-
-POST http://localhost:8000/api/logout
-Accept: application/json
-Authorization: Bearer 78|fklG1wowH12MnYZE2DZiSli74G6OeiG427AsAu6L
-
-###
-
-http://localhost:8000/api
-Accept: application/json
 
 ###
