@@ -27,8 +27,10 @@ Content-Type: application/json
 
 ###
 
-http://localhost:8000/api/appdata
+https://gewnyjiwpri.herokuapp.com/api/appdata
 Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 1|HGLE2nY4XewhpBBFtjeho9FQAo7Nzjcse2c6rFG0
 
 ###
 
@@ -39,7 +41,7 @@ Authorization: Bearer Bearer 1|HGLE2nY4XewhpBBFtjeho9FQAo7Nzjcse2c6rFG0
 
 {
   "name": "app.name",
-  "value": "app.0"
+  "value": "0.0.0"
 }
 
 ###
