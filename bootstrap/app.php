@@ -41,8 +41,9 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+//
 // https://github.com/barryvdh/laravel-dompdf
-// https://www.youtube.com/watch?v=o-C77FibAAo
+// @setup https://www.youtube.com/watch?v=o-C77FibAAo
 $app->singleton(\Barryvdh\DomPDF\ServiceProvider::class);
 
 /*

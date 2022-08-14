@@ -2,7 +2,7 @@
 
 http://localhost:8000/api/user
 Accept: application/json
-Authorization: Bearer 1|HGLE2nY4XewhpBBFtjeho9FQAo7Nzjcse2c6rFG0
+Authorization: Bearer 3|XdnJ8XAQ7vTANp2PEckQULfbdeS7kaBrRTVqcHog
 
 ### send-email
 
@@ -16,7 +16,7 @@ Content-Type: application/json
 
 ###
 
-POST https://qyhnjtvrhog.herokuapp.com/api/authenticate
+POST http://localhost:8000/api/authenticate
 Accept: application/json
 Content-Type: application/json
 
